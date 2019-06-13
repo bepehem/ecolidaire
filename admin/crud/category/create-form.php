@@ -5,11 +5,11 @@
     <form method="post" action="create-query.php">
         <div class="form-group">
             <label>Libellé</label>
-            <input type="text" name="label" class="form-control" placeholder ="libellé" required>
+            <input type="text" name="label" class="form-control" placeholder="Libellé" required>
         </div>
-        <button type="submit" class="btn btn-success"></button>
-        <i class="fa fa-check"></i>
-        Ajouter
+        <button type="submit" class="btn btn-success">
+            <i class="fa fa-check"></i>
+            Ajouter
         </button>
     </form>
 
