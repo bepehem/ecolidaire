@@ -6,7 +6,7 @@ $categories = getAllRows("category");
 
 <footer class="site-footer">
     <div class="container">
-        Copyright <?= date('Y'); ?> Ecolidaire
+        Ecolidaire &copy; 2013 - <?= date('Y'); ?>
     </div>
     <div>
         <form method="post" action="insert-category.php">

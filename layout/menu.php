@@ -10,7 +10,7 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.php">Accueil</a></li>
-                    <li><a href="register.php">Register</a></li>
+                    <li><a href="admin/">Register</a></li>
                     <li><a href="#">Actions</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">About</a></li>
