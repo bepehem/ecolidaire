@@ -1,13 +1,13 @@
 <?php
 require_once __DIR__ . "/../../../model/database.php";
 
-$categories = getAllRows("category");
+$projects = getAllProjects();
 
 require_once __DIR__ . "/../../layout/header.php";
 ?>
 
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Gestion des catégories</h1>
+        <h1 class="h2">Gestion des projets</h1>
     </div>
 
     <a href="create-form.php" class="btn btn-primary">
@@ -21,14 +21,22 @@ require_once __DIR__ . "/../../layout/header.php";
     <table class="table table-striped table-bordered">
         <thead class="thead-light">
         <tr>
-            <th>Libellé</th>
+            <th>Titre</th>
+            <th>Catégorie</th>
+            <th>Image</th>
+            <th>Prix</th>
             <th>Actions</th>
         </tr>
         </thead>
         <tbody>
-        <?php foreach ($categories as $category) : ?>
+        <?php foreach ($projects as $project) : ?>
             <tr>
-                <td><?= $category["label"]; ?></td>
+                <td><?= $project["title"]; ?></td>
+                <td><?= $project["category"]; ?></td>
+                <td><img src="../../../images/<?= $project["picture"]; ?>" class="img-thumbnail" alt="img-thumbnail">
+                </td>
+                <td><?= $project["price"]; ?></td>
+
                 <td class="actions">
                     <div class="d-flex justify-content-around">
                     <a href="update-form.php?id=<?= $category["id"]; ?>" class="btn btn-warning">
