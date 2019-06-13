@@ -2,6 +2,7 @@
 
 session_start();
 
+require_once __DIR__ . "/../config/parameters.php";
 require_once __DIR__ . "/../model/database.php";
 
 $user= null;
@@ -23,7 +24,7 @@ if (isset($_POST["email"]) && isset($_POST["password"])){
 }
 
 if (!$user) {
-    header("Location: login.php");
+    header("Location: " .SITE_ADMIN . "/login.php");
 } else if (!$user["admin"]){
-    header("location: ../");
+    header("location: " .SITE_URL);
 }
