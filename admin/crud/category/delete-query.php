@@ -11,7 +11,7 @@ $errCode = deleteRow("category", $id);
 if ($errCode) {
     $_SESSION["flash"][] = ["type" => "danger", "message" => "Impossible de supprimer cet élément !"];
 } else {
-    $_SESSION["flash"][] = ["type" => "danger", "message" => "Impossible de supprimer cet élément !"];
+    $_SESSION["flash"][] = ["type" => "success", "message" => "Elément supprimé avec succès !"];
 }
 
 // Rediriger l'utilisateur

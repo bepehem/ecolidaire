@@ -35,7 +35,7 @@ require_once __DIR__ . "/../../layout/header.php";
                 <td><?= $project["category"]; ?></td>
                 <td><img src="../../../images/<?= $project["picture"]; ?>" class="img-thumbnail" alt="img-thumbnail">
                 </td>
-                <td><?= $project["price"]; ?></td>
+                <td><?= number_format($project["price"], 0, ',', ' '); ?> € </td>
 
                 <td class="actions">
                     <div class="d-flex justify-content-around">
