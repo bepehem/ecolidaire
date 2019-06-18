@@ -39,13 +39,13 @@ require_once __DIR__ . "/../../layout/header.php";
 
                 <td class="actions">
                     <div class="d-flex justify-content-around">
-                    <a href="update-form.php?id=<?= $category["id"]; ?>" class="btn btn-warning">
+                    <a href="update-form.php?id=<?= $project["id"]; ?>" class="btn btn-warning">
                         <i class="fa fa-edit"></i>
                         Modifier
                     </a>
 
                     <form method="post" action="delete-query.php">
-                        <input type="hidden" name="id" value="<?= $category["id"]; ?>">
+                        <input type="hidden" name="id" value="<?= $project["id"]; ?>">
                         <button type="submit" class="btn btn-danger">
                             <i class="fa fa-trash"></i>
                             Supprimer

@@ -81,7 +81,7 @@ function getOneRow(string $table, int $id) : array {
  * @return ?int Code erreur ou null
  */
 
-function deleteRow(string $table, int $id): ?int {
+function deleteRow($table, $id): ?int {
     global $connection;
 
     $query = "DELETE FROM $table WHERE id = :id";

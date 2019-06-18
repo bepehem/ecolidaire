@@ -17,4 +17,10 @@
                             Catégories
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= SITE_ADMIN; ?>crud/member/">
+                            <i class="fa fa-users"></i>
+                            Membres
+                        </a>
+    </li>
 </ul>

@@ -19,7 +19,7 @@ if ($dateEnd != "" && $dateStart > $dateEnd) {
     exit;
 }
 else {
-    move_uploaded_file($filePicture["tmp_name"], "../../../images/$picture");
+    move_uploaded_file($filePicture["tmp_name"], "../../../images/portraits/" . $filePicture["name"]);
 }
 
 // Envoyer les données à la base de données

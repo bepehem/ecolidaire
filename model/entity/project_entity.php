@@ -154,3 +154,26 @@ function insertProjectHasMember(int $projectId, int $memberId) {
     $stmt->bindParam(":member_id", $memberId);
     $stmt->execute();
 }
+
+function updateProject ($title, $picture, $description, $price, $dateStart, $dateEnd, $categoryId, $memberIds) {
+        global $connection;
+
+    $query = "
+        INSERT INTO project (title, picture, description, price, date_start, date_end, category_id)
+        VALUES (:title, :picture, :description, :price, :date_start, :date_end, :category_id)
+    ";
+
+    $dateStart = ($dateStart == "") ? null : $dateStart;
+    $dateEnd = ($dateEnd == "") ? null : $dateEnd;
+
+    $stmt = $connection->prepare($query);
+    $stmt->bindParam(":title", $title);
+    $stmt->bindParam(":picture", $picture);
+    $stmt->bindParam(":description", $description);
+    $stmt->bindParam(":price", $price);
+    $stmt->bindParam(":date_start", $dateStart);
+    $stmt->bindParam(":date_end", $dateEnd);
+    $stmt->bindParam(":category_id", $categoryId);
+    $stmt->execute();
+
+    }
